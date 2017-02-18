@@ -109,6 +109,7 @@ public class RoundImageView extends android.support.v7.widget.AppCompatImageView
     //draw user image
     Bitmap roundImage = createRoundImage(theImage, imageRect.width());
     canvas.drawBitmap(roundImage, newRectFromBitmap(roundImage), imageRect, null);
+    roundImage.recycle();
   }
 
   @Override protected void onSizeChanged(int w, int h, int oldw, int oldh) {
